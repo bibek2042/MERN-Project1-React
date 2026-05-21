@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 function Card({blog}){
     return(
-      <>
+    
+      <Link to={`/blog/${blog._id}`}>
 <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-md">
     <div className="relative">
-        <img className="w-full h-64 object-cover" src={'http://localhost:3000/' + blog.image} alt="Image" />
+    <img className="w-full h-64 object-cover" src={blog.image} alt="Image" />
         <div className="absolute top-0 right-0">
             <div className="w-32 h-8 absolute top-4 -right-8">
                 <div
@@ -20,8 +23,8 @@ function Card({blog}){
     </div>
 </div>
         
+</Link>
 
- </>
     )
 }
 

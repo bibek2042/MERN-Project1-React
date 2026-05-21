@@ -22,9 +22,9 @@ function Home(){
 
         <div className ="flex flex-wrap">
         {
-            blogs.map(function(blog){
+            blogs.map(function(blog,index){
                 return(
-                     <Card blog ={blog}/>
+                     <Card key={index}blog ={blog}/>
                 )
             })
         }
