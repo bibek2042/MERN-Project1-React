@@ -8,7 +8,7 @@ function SingleBlog(){
   const navigate = useNavigate()
   const [blog,setBlog] = useState({})
   const fetchSingleBlog = async ()=>{
-    const response =await axios.get("https://mern-node-u9wv.onrender.com" + id)
+    const response =await axios.get("https://mern-node-u9wv.onrender.com/blog" + id)
     setBlog(response.data.data)
   }
 
@@ -17,7 +17,7 @@ function SingleBlog(){
   },[])
    
   const deleteFunction = async ()=>{
-    const response = await axios.delete("https://mern-node-u9wv.onrender.com" + id)
+    const response = await axios.delete("https://mern-node-u9wv.onrender.com/blog" + id)
     console.log(response.status)
     if(response.status === 200){
         alert("Delete successfully")

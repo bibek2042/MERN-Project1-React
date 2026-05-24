@@ -29,7 +29,7 @@ const handleChange = (e)=>{
 
    const createBlog = async(e)=>{
     e.preventDefault()
-   const response = await axios.post("https://mern-node-u9wv.onrender.com",data,{
+   const response = await axios.post("https://mern-node-u9wv.onrender.com/blog",data,{
     headers : {
         "Content-Type" : "multipart/form-data"
     }
